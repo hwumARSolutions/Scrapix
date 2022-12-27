@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #ffffff;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    padding: 5px 5%;
+}
+
+.logo {
+    width: 120px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right ul li {
+    list-style: none;
+    display: inline-block;
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: large;
+}
+
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    margin: 30px;
+    width: 96%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 80px;
+}
+
+.content .lower-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content .container {
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+}
+
+.content .container .box {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 280px;
+    height: 400px;
+}
+
+.content .container .box .upper-box {
+    background-color: #d0c5c5;
+    flex: 1;
+    border-width: 5px 5px 0px 5px;
+    border-color: #d0c5c5;
+    border-radius: 10px 10px 0px 0px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .container .box .lower-box {
+    background-color: #d9d9d9;
+    flex: 2.5;
+    border-width: 0px 5px 5px 5px;
+    border-color: #d9d9d9;
+    border-radius: 0px 0px 10px 10px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .container .box .upper-box .post-author {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.content .container .box .upper-box .post-author img {
+    height: 80px;
+    width: 80px;
+    margin-top: 2px;
+    border-radius: 50%;
+}
+
+.content .container .box .upper-box .post-author .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.content .container .box .upper-box .post-author .profile-name .name {
+    font-size: 22px;
+}
+
+.content .container .box .upper-box .post-author .profile-name .username {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.content .container .box .upper-box .post-author .profile-name .time {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.content .container .box .lower-box .post {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    color: white;
+    opacity: 0.8;
+}
+
+.em-button {
+    appearance: button;
+    background-color: #767777;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer-div {
+    display: block;
+    padding: 10px 0;
+    background-color: #949494;
+}
+
+.footer-div ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-div ul li {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.footer-div ul a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-div ul a:hover {
+    opacity: 1;
+}
+
+.footer-div .copyright {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #ffffff;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
