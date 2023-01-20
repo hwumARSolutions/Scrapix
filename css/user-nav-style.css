@@ -1,0 +1,77 @@
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    border: 1px solid #a2a2a2;
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a2a2a2;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+.container {
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 100%;
+}
+
+.ver-nav {
+    min-height: 100vh;
+    background-color: #ececec;
+    height: 100%;
+    overflow: auto;
+    order: 1;
+    position: fixed;
+    min-width: 150px;
+    border-right: 2px solid #a2a2a2;
+}
+
+.ver-nav h1 {
+    font-family: Copperplate, fantasy;
+    letter-spacing: 2px;
+    padding: 20px 0px 5px 40px;
+}
+
+.ver-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px 0px 40px;
+    width: 200px;
+}
+
+.ver-nav ul li a {
+    display: inline-block;
+    color: #343434;
+    padding: 15px 12px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.side-nav {
+    order: 2;
+    margin-left: 242px;
+    width: 100%;
+}

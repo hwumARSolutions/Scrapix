@@ -1,0 +1,253 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#scrapbook-dialog {
+    position: absoulte;
+    margin: 0px;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 85%;
+}
+
+span {
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.scrapbook-open {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scrapbook-content {
+    list-style: none;
+    column-gap: 0;
+    padding: 0;
+    column-count: 3;
+    margin-left: 30px;
+}
+
+.scrapbook-content ul {
+    list-style: none;
+    column-gap: 0;
+    padding: 0;
+}
+
+.scrap-element {
+    width: 98%;
+    max-height: 500px;
+    border: transparent;
+    break-inside: avoid;
+    column-gap: 0px;
+    margin-bottom: 10px;
+}
+
+.scrap-element .element-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrap-element .element-image img {
+    max-width: 98%;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+.scrap-element p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.scrapbook-button {
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.scrapbook-button form {
+    width: 350px;
+    height: 30px;
+    display: inline;
+}
+
+.scrapbook-button #text-submit,
+.scrapbook-button #image-submit {
+    background-color: #0276FF;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    color: #fff;
+    cursor: pointer;
+    font-family: "RM Neue", sans-serif;
+    line-height: 1.15;
+    margin: 0;
+    padding: 5px 5px;
+    text-align: center;
+    margin-left: 3px;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-box {
+    flex: 1;
+    border-bottom: 1px solid #a2a2a2;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-box {
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile-pic {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.details-box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.box-1 {
+    height: 60px;
+}
+
+.box-1 .username,
+.box-1 .edit-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-1 .username {
+    font-size: 40px;
+}
+
+.box-1 .edit-profile {
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.box-1 .edit-profile .fa-pen-to-square {
+    margin-right: 10px;
+}
+
+.box-1 .edit-profile button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+}
+
+.box-2 {
+    height: 40px;
+    margin-bottom: -10px;
+}
+
+.box-2 .followers,
+.box-2 .following {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box-2 .following {
+    margin-left: 20px;
+}
+
+.box-3 {
+    align-items: center;
+    height: 80px;
+    font-size: 14px;
+}
+
+.lower-box {
+    flex: 2;
+    border-top: 1px solid #a2a2a2;
+    min-height: 618px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.box-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    width: 300px;
+}
+
+.box-4 button {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    color: #1b1b1b;
+}
+
+.box-4 button .fa-solid {
+    margin-right: 10px;
+}
+
+.lower-box .scrapbook-box {
+    margin: 30px;
+    background-color: #a2a2a2;
+    color: #a2a2a2;
+    width: 800px;
+    height: 400px;
+    border-radius: 12px;
+}

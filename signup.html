@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Scrapix | Sign Up</title>
-    <link rel="stylesheet" href="css/signup-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/signup-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 
 <body>
@@ -18,20 +18,20 @@
                 <button>Sign Up with Google</button>
             </div>
             <div class="or">
-                <p class="dash">———— </p>
-                <p class="or-word"> or </p>
-                <p class="dash"> ————</p>
+                <p class="dash">————</p>
+                <p class="or-word">or</p>
+                <p class="dash">————</p>
             </div>
             <form action="php/signup-successfully.php" class="sign-up-form" method="post">
                 <div class="email-address">
-                    <input type="text" class="form-input" name="email-address" id="email-address" placeholder="Email Address">
+                    <input type="text" class="form-input" name="email-address" id="email-address" placeholder="Email Address" required/>
                 </div>
                 <div class="username">
-                    <input type="text" class="form-input" name="username" id="username" placeholder="Scrapix Username">
+                    <input type="text" class="form-input" name="username" id="username" placeholder="Scrapix Username" required/>
                 </div>
                 <div class="password">
                     <div class="password-input">
-                        <input type="password" class="form-input" name="password" id="password" placeholder="Password" onkeyup='check();'>
+                        <input type="password" class="form-input" name="password" id="password" placeholder="Password" onkeyup="check();" required/>
                         <i class="far fa-eye" id="togglePassword"></i>
                     </div>
                 </div>
@@ -47,28 +47,42 @@
                 </div>
                 <script src="javascript/password-rule.js"></script>
                 <div class="re-password">
-                    <input type="password" class="form-input" name="re-password" id="re-password" placeholder="Repat Your Password" onkeyup='check();'>
+                    <input type="password" class="form-input" name="re-password" id="re-password" placeholder="Repat Your Password" onkeyup="check();" required/>
                     <i class="far fa-eye" id="togglerePassword"></i>
-                    <p id="message" style="color: red; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    font-size: 12px; font-weight: bold;"> </p>
+                    <p id="message" style="
+                color: red;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 12px;
+                font-weight: bold;
+              "></p>
                 </div>
                 <script src="javascript/signup-password-visible.js"></script>
                 <script src="javascript/confirm-password.js"></script>
                 <div class="terms">
                     <div class="terms-line">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                    </div>
-                </div>
-                <div class="sign-up">
-                    <input type="submit" name="submit" id="submit" class="form-submit" value="Sign Up" />
-                </div>
-            </form>
-            <div class="login-here" id="login-here">
-                <p>Have already an account? <a href="login.html" class="login-here-link">Login here</a></p>
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required/>
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in
+                <a href="#" class="term-service">Terms of service</a></label
+              >
             </div>
+          </div>
+          <div class="sign-up">
+            <input
+              type="submit"
+              name="submit"
+              id="submit"
+              class="form-submit"
+              value="Sign Up"
+            />
+          </div>
+        </form>
+        <div class="login-here" id="login-here">
+          <p>
+            Have already an account?
+            <a href="login.html" class="login-here-link">Login here</a>
+          </p>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
