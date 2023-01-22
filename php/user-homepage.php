@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="/Scrapix/scrapix/css/user-nav-style.css">
     <link rel="stylesheet" href="/Scrapix/scrapix/css/user-homepage-style.css">
     <script src="https://kit.fontawesome.com/4c430707bb.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.1.0/dist/dce.js"></script>
 </head>
 
 <body>
     <!-- default container for every user page -->
+    <dialog id="cameraDialog">
+        <!-- <span class="close-camera" id="close">&times;</span> -->
+        <form method="dialog" class="cameraOpen">
+            <div class="camera-content">
+                <div id="enhancerUIContainer"></div>
+                <button id="capture" name="capture">Capture</button>
+            </div>
+        </form>
+    </dialog>
     <div class="container">
         <div class="ver-nav">
             <h1>Scrapix</h1>
@@ -57,6 +67,7 @@
                             <div class="new-post-text-area">
                                 <textarea name="post" id="post" cols="70" rows="5" placeholder="Write something..."></textarea>
                                 <img id="preview"/>
+                                <img id="captured-preview"/>
                             </div>
                             <div class="location-info">
                                 <input type="text" style="display:none;" name="latitude" id="latitude">
@@ -66,6 +77,9 @@
                             <script src="/Scrapix/scrapix/javascript/gps-location.js"></script>
                         </div>
                         <div class="new-post-button">
+                            <button type="button" id="showCamera">Camera</button>
+                            <input type="text" id="imageurl" name="imageurl" style="display: none;">
+                            <script src="/Scrapix/scrapix/javascript/camera.js"></script>
                             <button type="button" id="upload" onclick="document.getElementById('image').click();">Upload</button>
                             <input type="file" style="display:none;" id="image" name="image" onchange="loadFile(event)">
                             <script>
@@ -116,6 +130,11 @@
                                     <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($post_row['image']); ?>" />
                                 </div>
                                 <?php } ?>
+                                <?php if($post_row['capture_image'] != null) { ?>
+                                <div class="post-image">
+                                    <img src="<?php echo ($post_row['capture_image']); ?>">
+                                </div>
+                                <?php } ?>
                                 <?php
                                     $comment_data = $mysqli->query("SELECT * FROM post_comment WHERE post_id = '$post_id' ORDER BY comment_id ASC");
                                     if($comment_data->num_rows != 0) { ?>
@@ -126,7 +145,6 @@
                                                         <p class="comment-username" style="display: inline;"><?php echo ($comment_row['comment_username']); ?></p>
                                                         <p class="comment-time" style="display: inline;"><?php echo ($comment_row['comment_time']); ?></p>
                                                         <p class="comment-content"><?php echo ($comment_row['comment_content']); ?></p>
-                                                        
                                                     </div>
                                             <?php } ?>
                                         </div>
