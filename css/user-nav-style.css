@@ -72,6 +72,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .side-nav {
     order: 2;
-    margin-left: 242px;
+    /* margin-left: 242px; */
     width: 100%;
 }

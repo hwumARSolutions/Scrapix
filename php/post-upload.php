@@ -68,7 +68,7 @@ if(isset($_POST["post-submit"])) {
             echo '<script>alert("Posted!")
             document.location="user-homepage.php"</script>';
         } else {
-            echo '<script>alert("File upload failed, please try again.")
+            echo '<script>alert("Failed, please try again.")
             history.back()</script>';
         }
     }

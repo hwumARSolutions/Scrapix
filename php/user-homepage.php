@@ -136,7 +136,7 @@
                                 </div>
                                 <?php } ?>
                                 <?php
-                                    $comment_data = $mysqli->query("SELECT * FROM post_comment WHERE post_id = '$post_id' ORDER BY comment_id ASC");
+                                    $comment_data = $mysqli->query("SELECT * FROM post_comment WHERE post_id = '$post_id' ORDER BY comment_id DESC");
                                     if($comment_data->num_rows != 0) { ?>
                                         <div class="comments-display">
                                             <?php 
@@ -194,7 +194,31 @@
             </div>
         </div>
         <div class="right-nav">
-            <p>hi</p>
+            <div class="story-container">
+                <div class="story-text">
+                    <p>Stories</p>
+                </div>
+                <div class="story-content">
+                    <img src="/Scrapix/scrapix/images/bepic.jpg">
+                    <img src="/Scrapix/scrapix/images/bepic.jpg">
+                    <img src="/Scrapix/scrapix/images/kjpic.jpg">
+                    <img src="/Scrapix/scrapix/images/kjpic.jpg">
+                    <img src="/Scrapix/scrapix/images/khalidpic.jpg">
+                    <img src="/Scrapix/scrapix/images/khalidpic.jpg">
+                </div>
+            </div>
+            <div class="suggestion-container">
+                <div class="suggest-text">
+                    <p>Suggestions For You</p>
+                </div>
+                <div class="suggest-content">
+                    <ul>
+                        <li><img src="/Scrapix/scrapix/images/bepic.jpg">Billie Eilish</li>
+                        <li><img src="/Scrapix/scrapix/images/kjpic.jpg">Kendell Jenner</li>
+                        <li><img src="/Scrapix/scrapix/images/khalidpic.jpg">Khalid</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>

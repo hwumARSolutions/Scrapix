@@ -10,8 +10,8 @@ function getCoordintes() {
         var crd = pos.coords;
         var lat = crd.latitude.toString();
         var lng = crd.longitude.toString();
-        // var lat = "3.044917";
-        // var lng = "101.445564";
+        // var lat = "2.93527";
+        // var lng = "101.69112";
         var coordinates = [lat, lng];
         document.getElementById('latitude').value = lat;
         document.getElementById('longitude').value = lng;
