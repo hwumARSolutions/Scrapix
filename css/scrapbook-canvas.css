@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.page-title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.ver-nav-title {
+    width: fit-content;
+    margin: 0px 40px 0px 40px;
+}
+
+.ver-nav-title p {
+    font-family: 'poppins', sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 1000;
+    width: fit-content;
+    color: whitesmoke;
+    margin: 0px;
+}
+
+.page-title-button {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 8px 20px;
+    cursor: default;
+    font-size: 16px;
+    font-weight: bold;
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.page-title-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.page-content {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.canvas-left {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.canvas-left .canvas {
+    margin-top: 10px;
+    width: 96%;
+    height: 89%;
+}
+
+.canvas-left canvas {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.others {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.others button {
+    background-color: #c4c4c4;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upper,
+.lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.upper button,
+.lower button {
+    margin-left: 5px;
+}
+
+.upper p {
+    margin: 0px;
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.lower input {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.side-panel {
+    margin-left: 3%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90%;
+    /* background-color: #d9d9d9;
+    border-radius: 10px; */
+}
+
+.add-background-color,
+.add-image,
+.add-text,
+.add-sticker {
+    background-color: #c4c4c4;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.add-background-color label,
+.add-image label,
+.add-text label,
+.add-sticker label {
+    margin: 2%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.add-background-color input,
+.add-text input[type=color] {
+    margin: 2%;
+    border: transparent;
+    border-radius: 5px;
+    margin-left: 0px;
+}
+
+.add-image select,
+.add-text select,
+.add-sticker select {
+    padding: 3px 2px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 2%;
+    margin-left: 0px;
+}
+
+.add-image button,
+.add-sticker button {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 3px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0px 0px 2% 5%;
+}
+
+.add-text input[type=text] {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 3px 10px;
+    margin: 2%;
+    margin-left: 3%;
+    width: 72%;
+}
+
+.add-text p {
+    margin: 0px 5% 2% 5%;
+    font-size: 12px;
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.add-sticker img {
+    margin: 5%;
+    width: 100px;
+    height: 100px;
+}

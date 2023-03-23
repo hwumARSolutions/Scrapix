@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/Scrapix/scrapix/css/user-nav-style.css">
     <link rel="stylesheet" href="/Scrapix/scrapix/css/user-homepage-style.css">
+    <link rel="stylesheet" href="/Scrapix/scrapix/css/rs-user-homepage-style.css">
     <script src="https://kit.fontawesome.com/4c430707bb.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.1.0/dist/dce.js"></script>
 </head>
 
-<body>
+<body oncontextmenu="return false">
     <!-- default container for every user page -->
     <dialog id="cameraDialog">
         <!-- <span class="close-camera" id="close">&times;</span> -->
@@ -25,16 +26,17 @@
     </dialog>
     <div class="container">
         <div class="ver-nav">
-            <h1>Scrapix</h1>
-            <ul>
-                <li><i class="fa-sharp fa-solid fa-house"></i><a href="user-homepage.php">Home</a></li>
-                <li><i class="fa-sharp fa-solid fa-compass"></i><a href="get-current-loc.php">Explore</a></li>
-                <li><i class="fa-solid fa-bell"></i><a href="#notification">Notification</a></li>
-                <li><i class="fa-solid fa-inbox"></i><a href="#messages">Messages</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="user-profile.php">Profile</a></li>
-                <li><i class="fa-solid fa-bars"></i><a href="#more">More</a></li>
-                <li><i class="fa-solid fa-right-from-bracket"></i><a href="/Scrapix/scrapix/index.html">Logout</a></li>
-            </ul>
+            <div class="ver-nav-title">
+                <p>Scrapix</p>
+            </div>
+            <div class="ver-nav-content">
+                <a id="a-top" href="/Scrapix/scrapix/php/user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
+                <a href="/Scrapix/scrapix/php/get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
+                <a href="/Scrapix/scrapix/user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
+                <a href="/Scrapix/scrapix/php/user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
+                <a href="/Scrapix/scrapix/php/user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
+                <a d="a-bottom" href="/Scrapix/scrapix/index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
+            </div>
         </div>
         <div class="side-nav">
             <div class="search-bar">
@@ -46,7 +48,7 @@
                 </div> 
                 <script src="/Scrapix/scrapix/javascript/username-search.js"></script>
             </div>
-            <div class="search-result" id="search-result" style="display: none;">
+            <!-- <div class="search-result" id="search-result" style="display: none;">
                 <ul id="search-result-list">
                     <?php
                         require_once('connect.php');
@@ -56,16 +58,16 @@
                     <?php } ?>
                     <li id="no-result" style="display: none;"><a style="cursor: none;">No results found</a></li>
                 </ul>
-                </div>
+            </div> -->
             <div class="profile-bar">
                 <div class="profile-box">
                     <form action="post-upload.php" method="post" enctype="multipart/form-data">
                         <div class="new-post-box">
-                            <div class="profile-pic">
+                            <!-- <div class="profile-pic">
                                 <img src="/Scrapix/scrapix/images/user-profile.png">
-                            </div>
+                            </div> -->
                             <div class="new-post-text-area">
-                                <textarea name="post" id="post" cols="70" rows="5" placeholder="Write something..."></textarea>
+                                <textarea name="post" id="post" cols="82" rows="1" placeholder="What's on your mind?"></textarea>
                                 <img id="preview"/>
                                 <img id="captured-preview"/>
                             </div>
@@ -194,7 +196,27 @@
             </div>
         </div>
         <div class="right-nav">
-            <div class="story-container">
+            <div class="profile-display">
+                <div class="profile-pic">
+                    <img src="/Scrapix/scrapix/images/user-profile.png">
+                </div>
+                <div class="username-display">
+                    <p>@<?php echo $_SESSION['username'];?></p>                    
+                </div>
+            </div>
+            <div class="suggestion-container">
+                <div class="suggest-text">
+                    <p>Suggestions For You</p>
+                </div>
+                <div class="suggest-content">
+                    <ul>
+                        <li><img src="/Scrapix/scrapix/images/bepic.jpg">Billie Eilish</li>
+                        <li><img src="/Scrapix/scrapix/images/kjpic.jpg">Kendell Jenner</li>
+                        <li><img src="/Scrapix/scrapix/images/khalidpic.jpg">Khalid</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="story-container">
                 <div class="story-text">
                     <p>Stories</p>
                 </div>
@@ -218,7 +240,7 @@
                         <li><img src="/Scrapix/scrapix/images/khalidpic.jpg">Khalid</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

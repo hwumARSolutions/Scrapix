@@ -5,40 +5,55 @@
 .side-nav {
     display: flex;
     flex-direction: column;
-    margin-left: 241px;
+    align-items: center;
+    width: 80%;
 }
 
-.current-loc-display {
-    width: 100%;
-    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
-    height: 60px;
+.page-title {
+    width: 98%;
+    height: 7%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 1%;
 }
 
-.current-loc-display p {
-    margin: 0;
-    margin-left: 20px;
-    padding: 0;
-}
-
-.current-loc-display #p1 {
-    font-size: 12px;
-}
-
-.current-loc-display #p2 {
+.page-title #p2 {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    cursor: default;
+    padding: 6px 0;
+    text-align: center;
     font-size: 18px;
     font-weight: bold;
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.page-title span {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.page-title #p1 {
+    background-color: transparent;
+    border: transparent;
+    padding: 0px 15px 0px 0px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
 .explore-news-feed {
+    width: 100%;
     margin-left: 5px;
     list-style: none;
     column-gap: 0;
     padding: 0;
-    column-count: 3;
+    column-count: 2;
 }
 
 .post-card {
@@ -52,9 +67,13 @@
     align-items: center;
     column-gap: 5px;
     margin-bottom: 15px;
+    background-color: #d9d9d9;
+    border: 1px soild #d9d9d9;
+    border-radius: 10px;
 }
 
 .post-card .post-image {
+    margin: 10px 5px 0px 5px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -73,8 +92,9 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
-    margin-left: 30px;
-    margin-top: 5px;
+    /* margin-left: 30px;
+    margin-top: 5px; */
+    margin: 5px 0px 10px 20px;
 }
 
 .post-card .post-header img {
@@ -111,19 +131,7 @@
     font-size: 12px;
 }
 
-@Media (Min-Width: 320px) And (Max-Width: 759.5px) {
-    .explore-news-feed {
-        Column-Count: 1;
-    }
-}
-
-@Media (Min-Width: 760px) And (Max-Width: 979.5px) {
-    .explore-news-feed {
-        Column-Count: 1;
-    }
-}
-
-@Media (Min-Width: 980px) And (Max-Width: 1240.5px) {
+@Media (Min-Width: 1000px) And (Max-Width: 1240.5px) {
     .explore-news-feed {
         Column-Count: 2;
     }

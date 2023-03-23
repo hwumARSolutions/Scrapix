@@ -1,11 +1,7 @@
 body {
-    min-height: 100vh;
-    margin: 0 auto;
-    background: #ffffff;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #242424;
 }
 
 body::-webkit-scrollbar {
@@ -27,51 +23,78 @@ body::-webkit-scrollbar-thumb:hover {
     background: gray;
 }
 
-.container {
-    min-height: 100vh;
-    background: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start;
-    width: 100%;
-}
-
 .ver-nav {
-    min-height: 100vh;
-    background-color: #ececec;
-    height: 100%;
-    overflow: auto;
     order: 1;
-    position: fixed;
-    min-width: 150px;
-    border-right: 2px solid #a2a2a2;
-}
-
-.ver-nav h1 {
-    font-family: Copperplate, fantasy;
-    letter-spacing: 2px;
-    padding: 20px 0px 5px 40px;
-}
-
-.ver-nav ul {
-    list-style-type: none;
     margin: 0;
-    padding: 0px 0px 0px 40px;
-    width: 200px;
+    padding: 0;
+    width: 20%;
+    background-color: #242424;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
 }
 
-.ver-nav ul li a {
-    display: inline-block;
-    color: #343434;
-    padding: 15px 12px;
+.ver-nav-title,
+.ver-nav-content {
+    width: 80%;
+    margin-left: 13%;
+}
+
+.ver-nav-title p {
+    font-family: 'poppins', sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 1000;
+    width: fit-content;
+    color: whitesmoke;
+}
+
+.ver-nav-content {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+}
+
+.fa-right-from-bracket {
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+.fa-wand-magic-sparkles {
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+.fa-house,
+.fa-compass,
+.fa-book,
+.fa-user {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.ver-nav-content a {
+    display: block;
+    color: black;
+    padding: 16px 18px;
     text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid gray;
     font-weight: bold;
 }
 
-.side-nav {
+.ver-nav-content p {
+    display: inline;
+    margin: 0px;
+}
+
+div.side-nav {
     order: 2;
-    /* margin-left: 242px; */
-    width: 100%;
+    margin-left: 20%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }

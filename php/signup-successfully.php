@@ -10,23 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $number = preg_match('@[0-9]@', $pre_pass);
     $specialChars = preg_match('@[^\w]@', $pre_pass);
 
-    // if (empty($_POST["email-address"])) {
-    //     echo '<script>alert("Email Address is required.")
-    //             history.back()</script>';
-    // } elseif (empty($_POST["username"])) {
-    //     echo '<script>alert("Username is required.")
-    //             history.back()</script>';
-    // } elseif (empty($_POST["password"])) {
-    //     echo '<script>alert("Password is required.")
-    //             history.back()</script>';
-    // } elseif (empty($_POST["re-password"])) {
-    //     echo '<script>alert("Please repeat your password.")
-    //             history.back()</script>';
-    // } elseif (!isset($_POST['agree-term'])) {
-    //     echo '<script>alert("Please agree all statements in Terms of Service.")
-    //             history.back()</script>';
-    // } 
-
     if ($pre_pass != ($_POST["re-password"])) {
         echo '<script>alert("Password does not match.")
                 history.back()</script>';

@@ -1,0 +1,144 @@
+    @media only screen and (max-width: 1170px) {
+        .right-nav {
+            display: none;
+        }
+        .side-nav {
+            width: 80%;
+        }
+    }
+    
+    @media only screen and (max-width: 1030px) {
+        .ver-nav-content a {
+            padding: 10px 12px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    }
+    
+    @media only screen and (max-width: 950px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .ver-nav {
+            position: static;
+            height: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        div.side-nav {
+            margin-left: 0px;
+            width: 100%;
+        }
+        .ver-nav-title {
+            margin: 0;
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .ver-nav-title p {
+            width: fit-content;
+        }
+        .ver-nav-content {
+            margin: 0;
+            width: fit-content;
+            margin-left: 3%;
+        }
+        .ver-nav-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .ver-nav-content a {
+            display: block;
+            color: black;
+            width: fit-content;
+            padding: 6px px;
+            text-decoration: none;
+            border-bottom: 1px solid gray;
+            font-weight: bold;
+        }
+        .search-bar {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 790px) {
+        .container {
+            width: 100%;
+        }
+        .ver-nav {
+            background-color: white;
+            height: fit-content;
+            width: 100%;
+            top: 0px;
+        }
+        .ver-nav-title {
+            display: none;
+        }
+        .ver-nav-content {
+            background-color: white;
+            border-radius: 0px;
+            width: 100%;
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 40px;
+        }
+        .ver-nav-content a {
+            border: transparent;
+            width: fit-content;
+        }
+        div.side-nav {
+            margin-top: 8%;
+        }
+        .news-feed .post-box .post-caption {
+            font-size: 15px;
+        }
+        .news-feed .post-box .username-time-loc .post-username {
+            font-size: 14px;
+        }
+    }
+    
+    @media only screen and (max-width: 620px) {
+        .ver-nav-content a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .ver-nav-content a {
+            font-size: 10px;
+        }
+        .news-feed .post-box {
+            border-radius: 0px;
+            width: 100%;
+        }
+        .news-feed .post-box .comment-modal-content .comment-button .fa-solid,
+        .news-feed .post-box .post-buttons .like-button,
+        .news-feed .post-box .post-buttons .repost-button {
+            font-size: 12px;
+        }
+        .news-feed .post-box .comment-modal-content .comment-button #comment,
+        .news-feed .post-box .post-buttons #liked,
+        .news-feed .post-box .post-buttons #unliked,
+        .news-feed .post-box .post-buttons #repost {
+            font-size: 14px;
+        }
+    }
+    
+    @media only screen and (max-width: 450px) {
+        .news-feed .post-box .comment-modal-content .comment-button .fa-solid {
+            display: none;
+        }
+    }

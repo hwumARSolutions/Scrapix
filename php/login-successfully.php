@@ -15,7 +15,7 @@
         } else {
             $row = $stmt->fetch_assoc();
             $_SESSION['username'] = $row['username'];
-            echo '<script>document.location="/Scrapix/scrapix/php/user-profile.php"</script>';
+            echo '<script>document.location="/Scrapix/scrapix/php/user-homepage.php"</script>';
         }
     }
     

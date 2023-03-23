@@ -1,0 +1,183 @@
+@media only screen and (max-width: 1170px) {
+    .right-nav {
+        display: none;
+    }
+    .side-nav {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .ver-nav-content a {
+        padding: 10px 12px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .explore-news-feed {
+        Column-Count: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+    }
+    .ver-nav {
+        position: static;
+        height: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    div.side-nav {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0px;
+        min-height: 90%;
+        margin-top: 0%;
+        height: 700px;
+        width: 100%;
+    }
+    .ver-nav-title {
+        margin: 0;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .ver-nav-title p {
+        width: fit-content;
+    }
+    .ver-nav-content {
+        margin: 0;
+        width: fit-content;
+        margin-left: 3%;
+    }
+    .ver-nav-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .ver-nav-content a {
+        display: block;
+        color: black;
+        width: fit-content;
+        padding: 6px px;
+        text-decoration: none;
+        border-bottom: 1px solid gray;
+        font-weight: bold;
+    }
+    .page-content {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    div.side-nav {
+        height: 600px;
+    }
+    .container {
+        width: 100%;
+    }
+    .ver-nav {
+        background-color: white;
+        height: fit-content;
+        width: 100%;
+        top: 0px;
+    }
+    .ver-nav-title {
+        display: none;
+    }
+    .ver-nav-content {
+        background-color: white;
+        border-radius: 0px;
+        width: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+        height: 40px;
+    }
+    .ver-nav-content a {
+        border: transparent;
+        width: fit-content;
+    }
+    div.side-nav {
+        margin-top: 3%;
+    }
+    .scrap-title span {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .ver-nav-content a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    .page-title {
+        justify-content: center;
+    }
+    .image {
+        width: 85%;
+        height: 95%;
+    }
+    .scrap-content {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ver-nav-content a {
+        font-size: 10px;
+    }
+    div.side-nav {
+        height: 600px;
+    }
+    .page-title-button {
+        font-size: 12px;
+    }
+    .page-content {
+        height: 60%;
+    }
+    .scrap-content {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .page-title-button {
+        font-size: 10px;
+        padding: 8px 15px;
+    }
+    div.side-nav {
+        height: 600px;
+    }
+    .image {
+        width: 85%;
+        height: 95%;
+    }
+    .scrap-content {
+        height: 80%;
+    }
+    .page-content {
+        height: 40%;
+    }
+    .scrap-title span {
+        font-size: 10px;
+    }
+}

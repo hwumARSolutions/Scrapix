@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Scrapix | Scrapbook Creator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/Scrapix/scrapix/css/scrapbook-canvas.css">
+    <link rel="stylesheet" href="/Scrapix/scrapix/css/rs-scrapbook-canvas.css">
+    <script src="https://kit.fontawesome.com/4c430707bb.js" crossorigin="anonymous"></script>
+</head>
+
+<body oncontextmenu="return false">
+    <div class="page-title">
+        <div class="ver-nav-title">
+            <p>Scrapix</p>
+        </div>
+        <button class="page-title-button" type=""><a id="your-scrapbook" href="user-scrapbook.php"><i class="fa-solid fa-book" style="margin-right: 10px; margin-left: 0px;"></i>Your Scrapbook</a></button>
+        <button class="page-title-button" type=""><a id="scrapbook-explore" href="user-scrap-explore.php"><i class="fa-solid fa-users" style="margin-right: 10px"></i>Explore</a></button>
+    </div>
+    <div class="page-content">
+        <div class="canvas-left">
+            <div class="canvas">
+                <canvas id="canvas" width="1008" height="550"></canvas>
+            </div>
+            <div class="buttons">
+                <div class="others">
+                    <div class="upper">
+                        <p>Save before upload!</p>
+                        <button id="delete-button">Delete Last Element</button>
+                        <button id="save">Save</button>
+                    </div>
+                    <div class="lower">
+                        <form action="scrapbook-upload.php" method="post" enctype="multipart/form-data">
+                            <input type="text" id="title" name="title" placeholder="Enter scrapbook title...">
+                            <input type="text" id="scrap-caption" name="scrap-caption" placeholder="Enter post caption...">
+                            <input type="text" id="scrap-blob" name="scrap-blob" style="display: none;">
+                            <button type="submit" name="export" id="export">Upload</button>
+                            <div class="location-info" style="display:none;">
+                                <input type="text" style="display:none;" name="latitude" id="latitude">
+                                <input type="text" style="display:none;" name="longitude" id="longitude">
+                                <input type="text" style="display:none;" name="city-name" id="city-name">
+                            </div>
+                            <script src="/Scrapix/scrapix/javascript/gps-location.js"></script>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-panel">
+            <div class="add-background-color">
+                <label>Background Color: </label>
+                <input type="color" id="hex" name="hex" value="#ffffff">
+            </div>
+            <div class="add-image">
+                <label>Image Size: </label>
+                <select name="image-size-input" id="image-size-input">
+                    <option value="0.1">10%</option>
+                    <option value="0.3">30%</option>
+                    <option value="0.5">50%</option>
+                    <option value="0.7">70%</option>
+                </select>
+                <br>
+                <button id="upload" onclick="document.getElementById('image-input').click();"><span>Upload Image</span></button>
+                <input type="file" style="display:none;" id="image-input" name="image">
+            </div>
+            <div class="add-text">
+                <label>Font Size: </label>
+                <select name="font-size-input" id="font-size-input">
+                    <option value="18px Verdana">18px</option>
+                    <option value="22px Verdana">22px</option>
+                    <option value="25px Verdana">25px</option>
+                    <option value="30px Verdana">30px</option>
+                </select>
+                <br>
+                <label>Font Color: </label>
+                <input type="color" id="font-color-input" name="font-color-input">
+                <br>
+                <input id="text-input" type="text" placeholder="Enter text...">
+                <p>Press "ENTER" to add text</p>
+            </div>
+            <div class="add-sticker">
+                <div class="sticker-list" style="display:none;">
+                    <img id="horse" width="220" height="277" src="/Scrapix/scrapix/stickers/horse.png">
+                    <img id="bird" width="220" height="277" src="/Scrapix/scrapix/stickers/bird.png">
+                    <img id="happy-new-year" width="220" height="277" src="/Scrapix/scrapix/stickers/happy-new-year.png">
+                    <img id="rainbow" width="220" height="277" src="/Scrapix/scrapix/stickers/rainbow.png">
+                    <img id="santa-claus" width="220" height="277" src="/Scrapix/scrapix/stickers/santa-claus.png">
+                    <img id="birthday" width="220" height="277" src="/Scrapix/scrapix/stickers/birthday.png">
+                    <img id="burger" width="220" height="277" src="/Scrapix/scrapix/stickers/burger.png">
+                    <img id="cake" width="220" height="277" src="/Scrapix/scrapix/stickers/cake.png">
+                    <img id="campfire" width="220" height="277" src="/Scrapix/scrapix/stickers/campfire.png">
+                    <img id="confused" width="220" height="277" src="/Scrapix/scrapix/stickers/confused.png">
+                    <img id="cooking" width="220" height="277" src="/Scrapix/scrapix/stickers/cooking.png">
+                    <img id="cow" width="220" height="277" src="/Scrapix/scrapix/stickers/cow.png">
+                    <img id="japanese-food" width="220" height="277" src="/Scrapix/scrapix/stickers/japanese-food.png">
+                    <img id="man" width="220" height="277" src="/Scrapix/scrapix/stickers/man.png">
+                    <img id="noodles" width="220" height="277" src="/Scrapix/scrapix/stickers/noodles.png">
+                    <img id="panda" width="220" height="277" src="/Scrapix/scrapix/stickers/panda.png">
+                    <img id="penguin" width="220" height="277" src="/Scrapix/scrapix/stickers/penguin.png">
+                    <img id="woman" width="220" height="277" src="/Scrapix/scrapix/stickers/woman.png">
+                </div>
+                <label>Sticker Size: </label>
+                <select name="sticker-size-input" id="sticker-size-input">
+                    <option value="0.1">10%</option>
+                    <option value="0.3">30%</option>
+                    <option value="0.5">50%</option>
+                    <option value="0.7">70%</option>
+                </select>
+                <br>
+                <label>Sticker Name: </label>
+                <select name="sticker-input" id="sticker-input">
+                    <option value="horse" data-image="/Scrapix/scrapix/stickers/horse.png">Horse</option>
+                    <option value="bird" data-image="/Scrapix/scrapix/stickers/bird.png">Bird</option>
+                    <option value="happy-new-year" data-image="/Scrapix/scrapix/stickers/happy-new-year.png">Happy New Year</option>
+                    <option value="rainbow" data-image="/Scrapix/scrapix/stickers/rainbow.png">Rainbow</option>
+                    <option value="santa-claus" data-image="/Scrapix/scrapix/stickers/santa-claus.png">Santa Claus</option>
+                    <option value="birthday" data-image="/Scrapix/scrapix/stickers/birthday.png">Birthday</option>
+                    <option value="burger" data-image="/Scrapix/scrapix/stickers/burger.png">Burger</option>
+                    <option value="cake" data-image="/Scrapix/scrapix/stickers/cake.png">Cake</option>
+                    <option value="campfire" data-image="/Scrapix/scrapix/stickers/campfire.png">Campfire</option>
+                    <option value="confused" data-image="/Scrapix/scrapix/stickers/confused.png">Confused</option>
+                    <option value="cooking" data-image="/Scrapix/scrapix/stickers/cooking.png">Cooking</option>
+                    <option value="cow" data-image="/Scrapix/scrapix/stickers/cow.png">Cow</option>
+                    <option value="japanese-food" data-image="/Scrapix/scrapix/stickers/japanese-food.png">Japanese Food</option>
+                    <option value="man" data-image="/Scrapix/scrapix/stickers/man.png">Man</option>
+                    <option value="noodles" data-image="/Scrapix/scrapix/stickers/noodles.png">Noodles</option>
+                    <option value="panda" data-image="/Scrapix/scrapix/stickers/panda.png">Panda</option>
+                    <option value="penguin" data-image="/Scrapix/scrapix/stickers/penguin.png">Penguin</option>
+                    <option value="woman" data-image="/Scrapix/scrapix/stickers/woman.png">Woman</option>
+                </select>
+                <br>
+                <label>Sticker Preview: </label>
+                <br>
+                <img id="preview-sticker" src="/Scrapix/scrapix/stickers/horse.png">
+                <br>
+                <button id="add-sticker-button">Add Sticker</button>
+            </div>
+        </div>
+    </div>
+    <script src="/Scrapix/scrapix/javascript/scrapbook-canvas.js"></script>
+</body>
+
+</html>

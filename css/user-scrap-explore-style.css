@@ -1,0 +1,148 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.page-title {
+    width: 99%;
+    height: 7%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 2%;
+}
+
+.page-title-button {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 8px 20px;
+    cursor: default;
+    font-size: 16px;
+    font-weight: bold;
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.page-title-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.explore-news-feed {
+    width: 100%;
+    margin-left: 5px;
+    list-style: none;
+    column-gap: 0;
+    padding: 0;
+    column-count: 2;
+}
+
+.post-card {
+    width: 95%;
+    max-height: 500px;
+    border: transparent;
+    break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 15px;
+    background-color: #d9d9d9;
+    border: 1px soild #d9d9d9;
+    border-radius: 10px;
+}
+
+.post-card .post-image {
+    margin: 10px 5px 0px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card .post-image img {
+    max-width: 98%;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+.post-card .post-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    /* margin-left: 30px;
+    margin-top: 5px; */
+    margin: 5px 0px 10px 20px;
+}
+
+.post-card .post-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.post-card .post-profile-pic {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card .username-time-loc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.post-card .username-time-loc p {
+    margin: 0px;
+}
+
+.post-card .username-time-loc .post-username {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.post-card .username-time-loc .post-time,
+.post-card .username-time-loc .post-loc {
+    font-size: 12px;
+}
+
+@Media (Min-Width: 320px) And (Max-Width: 759.5px) {
+    .explore-news-feed {
+        Column-Count: 1;
+    }
+}
+
+@Media (Min-Width: 760px) And (Max-Width: 979.5px) {
+    .explore-news-feed {
+        Column-Count: 1;
+    }
+}
+
+@Media (Min-Width: 980px) And (Max-Width: 1240.5px) {
+    .explore-news-feed {
+        Column-Count: 2;
+    }
+}
+
+@Media (Min-Width: 1240.5px) {
+    .explore-news-feed {
+        Column-Count: 2;
+    }
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}

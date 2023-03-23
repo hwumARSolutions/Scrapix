@@ -22,7 +22,7 @@
     body {
         min-height: 100vh;
         margin: 0 auto;
-        background: #a2a2a2;
+        background: #242424;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -73,7 +73,7 @@
     }
     
     input[type=text] {
-        width: 300px;
+        width: fit-content;
         height: 50px;
         background-color: #f2f0f0;
         padding: 6px 15px;
@@ -85,7 +85,7 @@
     }
 </style>
 
-<body>
+<body oncontextmenu="return false">
     <div class="container">
         <div class="modal" id="modal">
             <div class="modal-content">

@@ -2,252 +2,236 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#scrapbook-dialog {
-    position: absoulte;
-    margin: 0px;
-    top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 85%;
-}
-
-span {
-    top: 0;
-    right: 10px;
-    font-size: 30px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.scrapbook-open {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.scrapbook-content {
-    list-style: none;
-    column-gap: 0;
-    padding: 0;
-    column-count: 3;
-    margin-left: 30px;
-}
-
-.scrapbook-content ul {
-    list-style: none;
-    column-gap: 0;
-    padding: 0;
-}
-
-.scrap-element {
-    width: 98%;
-    max-height: 500px;
-    border: transparent;
-    break-inside: avoid;
-    column-gap: 0px;
-    margin-bottom: 10px;
-}
-
-.scrap-element .element-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scrap-element .element-image img {
-    max-width: 98%;
-    max-height: 500px;
-    border-radius: 10px;
-}
-
-.scrap-element p {
-    font-size: 16px;
-    text-align: center;
-}
-
-.scrapbook-button {
-    bottom: 5px;
-    right: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.scrapbook-button form {
-    width: 350px;
-    height: 30px;
-    display: inline;
-}
-
-.scrapbook-button #text-submit,
-.scrapbook-button #image-submit {
-    background-color: #0276FF;
-    border-radius: 8px;
-    border-style: none;
-    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
-    color: #fff;
-    cursor: pointer;
-    font-family: "RM Neue", sans-serif;
-    line-height: 1.15;
-    margin: 0;
-    padding: 5px 5px;
-    text-align: center;
-    margin-left: 3px;
-}
-
 .side-nav {
     display: flex;
     flex-direction: column;
-}
-
-.upper-box {
-    flex: 1;
-    border-bottom: 1px solid #a2a2a2;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
-.profile-box {
-    width: 700px;
-    height: 200px;
+.page-title {
+    width: 95%;
+    height: 7%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
-.profile-pic {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-pic img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-}
-
-.details-box {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.box {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-}
-
-.box-1 {
-    height: 60px;
-}
-
-.box-1 .username,
-.box-1 .edit-profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.box-1 .username {
-    font-size: 40px;
-}
-
-.box-1 .edit-profile {
-    margin-top: 7px;
-    margin-left: 20px;
-}
-
-.box-1 .edit-profile .fa-pen-to-square {
+.page-title-button {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 8px 20px;
+    cursor: default;
+    font-size: 16px;
+    font-weight: bold;
+    width: fit-content;
     margin-right: 10px;
 }
 
-.box-1 .edit-profile button {
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 1px solid lightgray;
+.page-title-button a {
+    text-decoration: none;
+    color: black;
 }
 
-.box-2 {
-    height: 40px;
-    margin-bottom: -10px;
+.page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #d9d9d9;
+    width: 95%;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    margin-top: 2%;
+    height: 60%;
 }
 
-.box-2 .followers,
-.box-2 .following {
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 30%;
+    margin: 5px;
+    margin-top: 1.5%;
+    margin-right: 10px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-username {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 16px;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.profile-username p {
+    margin: 0px;
+}
+
+.profile-username #username {
+    font-size: 22px;
     font-weight: bold;
 }
 
-.box-2 .following {
-    margin-left: 20px;
+.profile-username #followers {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
-.box-3 {
+.profile-description p {
+    margin: 5px 0px 0px 5px;
+}
+
+.post-box {
+    margin-top: 1.5%;
+    width: 65%;
+    height: 95%;
+    overflow-y: auto;
+    background-color: #9c9c9c;
+    border-radius: 5px;
+}
+
+.post-card {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 80px;
-    font-size: 14px;
+    flex-direction: column;
+    width: 95%;
+    margin: 20px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #d9d9d9;
 }
 
-.lower-box {
-    flex: 2;
-    border-top: 1px solid #a2a2a2;
-    min-height: 618px;
+.time-loc,
+.post-caption,
+.post-image,
+.comments-display {
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.time-loc p {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.time-loc .delete-button {
+    margin-top: 5px;
+    float: right;
+}
+
+.time-loc button {
+    padding: 2px 10px;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.post-caption p {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.post-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-image img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+.likes {
+    width: 93%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.likes p {
+    font-size: 12px;
+    color: #4267B2;
+    margin: 0;
+    font-weight: bold;
+}
+
+.comments-display {
+    max-height: 120px;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 0px;
 }
 
-.box-4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 30px;
-    width: 300px;
+.comments-display::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
 }
 
-.box-4 button {
-    padding: 5px 10px;
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
+.post-box::-webkit-scrollbar {
+    width: 12px;
+    height: 100%;
+}
+
+.post-box::-webkit-scrollbar-track {
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+}
+
+.comments-display::-webkit-scrollbar-track,
+.post-box::-webkit-scrollbar-track {
+    border: 1px solid darkgray;
+    border-radius: 10px;
+}
+
+.comments-display::-webkit-scrollbar-thumb,
+.post-box::-webkit-scrollbar-thumb {
+    background: darkgray;
+    border-radius: 10px;
+}
+
+.comments-display::-webkit-scrollbar-thumb:hover,
+.post-box::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+.comment-box {
+    width: 98%;
+    margin: 0px 0px 5px 0px;
+}
+
+.comment-box .comment-username {
     font-weight: bold;
-    color: #1b1b1b;
+    font-size: 12px;
 }
 
-.box-4 button .fa-solid {
-    margin-right: 10px;
+.comment-box .comment-content {
+    font-size: 14px;
+    margin: 0px;
 }
 
-.lower-box .scrapbook-box {
-    margin: 30px;
-    background-color: #a2a2a2;
-    color: #a2a2a2;
-    width: 800px;
-    height: 400px;
-    border-radius: 12px;
+.comment-box .comment-time {
+    font-size: 10px;
+    opacity: 0.8;
 }

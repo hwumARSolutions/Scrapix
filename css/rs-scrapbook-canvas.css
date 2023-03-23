@@ -1,0 +1,142 @@
+@media only screen and (max-width: 1440px) {
+    .add-sticker select {
+        display: block;
+        margin-left: 5%;
+        padding: 3px 8px;
+    }
+    .add-sticker br {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .others {
+        flex-direction: column;
+    }
+    .upper,
+    .lower {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .add-text input[type=text] {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .add-background-color label,
+    .add-image label,
+    .add-text label,
+    .add-sticker label {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .add-background-color input {
+        display: block;
+        margin-left: 5%;
+        padding: 3px 8px;
+    }
+    .add-text input[type=text] {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .page-title {
+        justify-content: center;
+    }
+    .page-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .canvas-left {
+        width: 90%;
+    }
+    .side-panel {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        height: fit-content;
+        width: 90%;
+        margin-left: 0;
+        margin-top: 3%;
+        background-color: #c4c4c4;
+        border: 1px solid #c4c4c4;
+    }
+    .add-background-color,
+    .add-image,
+    .add-text,
+    .add-sticker {
+        width: 23%;
+        margin-left: 1%;
+        margin-right: 1%;
+        min-height: 100%;
+        margin-bottom: 0;
+    }
+    .add-background-color {
+        width: 18%;
+    }
+    .add-sticker {
+        width: 28%;
+    }
+    .add-sticker select {
+        display: block;
+        margin-left: 5%;
+        padding: 3px 0px;
+    }
+    .add-text input[type=text] {
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .add-image button {
+        font-size: 12px;
+        padding: 3px 2px;
+    }
+    .lower input,
+    .add-text input[type=text] {
+        padding: 5px 6px;
+        font-size: 12px;
+    }
+    .others button {
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+    .page-title-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .others {
+        align-items: flex-start;
+    }
+    .lower input {
+        width: 30%;
+    }
+    .add-sticker select {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .ver-nav-title {
+        margin: 0px 20px 0px 10px;
+    }
+    .add-background-color label,
+    .add-image label,
+    .add-text label,
+    .add-sticker label,
+    .add-text p {
+        font-size: 11px;
+    }
+    .add-sticker img {
+        width: 70px;
+        height: 70px;
+    }
+}
