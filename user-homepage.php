@@ -6,9 +6,9 @@
     <title>@<?php session_start(); echo $_SESSION['username'];?> | Homepage</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/user-nav-style.css">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/user-homepage-style.css">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/rs-user-homepage-style.css">
+    <link rel="stylesheet" href="user-nav-style.css">
+    <link rel="stylesheet" href="user-homepage-style.css">
+    <link rel="stylesheet" href="rs-user-homepage-style.css">
     <script src="https://kit.fontawesome.com/4c430707bb.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.1.0/dist/dce.js"></script>
 </head>
@@ -30,12 +30,12 @@
                 <p>Scrapix</p>
             </div>
             <div class="ver-nav-content">
-                <a id="a-top" href="/Scrapix/scrapix/php/user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
-                <a href="/Scrapix/scrapix/php/get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
-                <a href="/Scrapix/scrapix/user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
-                <a href="/Scrapix/scrapix/php/user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
-                <a href="/Scrapix/scrapix/php/user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
-                <a d="a-bottom" href="/Scrapix/scrapix/index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
+                <a id="a-top" href="user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
+                <a href="get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
+                <a href="user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
+                <a href="user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
+                <a href="user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
+                <a d="a-bottom" href="index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
             </div>
         </div>
         <div class="side-nav">
@@ -46,7 +46,7 @@
                     </button>
                     <input type="text" id='searchbar' name="search" class="search-input" placeholder="Search" onkeyup="search_username()">
                 </div> 
-                <script src="/Scrapix/scrapix/javascript/username-search.js"></script>
+                <script src="username-search.js"></script>
             </div>
             <!-- <div class="search-result" id="search-result" style="display: none;">
                 <ul id="search-result-list">
@@ -76,12 +76,12 @@
                                 <input type="text" style="display:none;" name="longitude" id="longitude">
                                 <input type="text" style="display:none;" name="city-name" id="city-name">
                             </div>
-                            <script src="/Scrapix/scrapix/javascript/gps-location.js"></script>
+                            <script src="gps-location.js"></script>
                         </div>
                         <div class="new-post-button">
                             <button type="button" id="showCamera">Camera</button>
                             <input type="text" id="imageurl" name="imageurl" style="display: none;">
-                            <script src="/Scrapix/scrapix/javascript/camera.js"></script>
+                            <script src="camera.js"></script>
                             <button type="button" id="upload" onclick="document.getElementById('image').click();">Upload</button>
                             <input type="file" style="display:none;" id="image" name="image" onchange="loadFile(event)">
                             <script>
@@ -110,7 +110,7 @@
                             <div class="post-box">
                                 <div class="post-header">
                                     <div class="post-profile-pic">
-                                        <img src="/Scrapix/scrapix/images/user-profile.png">
+                                        <img src="images/user-profile.png">
                                     </div>
                                     <div class="username-time-loc">
                                         <p class="post-username"><?php echo ($post_row['author_username']); ?></p>
@@ -185,10 +185,10 @@
                                                 </form>
                                             </div>
                                     <?php } ?>
-                                    <div class="repost-button">
+                                    <!-- <div class="repost-button">
                                         <i class="fa-solid fa-share"></i>
                                         <input type="submit" name="repost-submit" id="repost" value="Repost" />
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         <?php } ?>
@@ -198,7 +198,7 @@
         <div class="right-nav">
             <div class="profile-display">
                 <div class="profile-pic">
-                    <img src="/Scrapix/scrapix/images/user-profile.png">
+                    <img src="images/user-profile.png">
                 </div>
                 <div class="username-display">
                     <p>@<?php echo $_SESSION['username'];?></p>                    
@@ -210,37 +210,12 @@
                 </div>
                 <div class="suggest-content">
                     <ul>
-                        <li><img src="/Scrapix/scrapix/images/bepic.jpg">Billie Eilish</li>
-                        <li><img src="/Scrapix/scrapix/images/kjpic.jpg">Kendell Jenner</li>
-                        <li><img src="/Scrapix/scrapix/images/khalidpic.jpg">Khalid</li>
+                        <li><img src="images/bepic.jpg">Billie Eilish</li>
+                        <li><img src="images/kjpic.jpg">Kendell Jenner</li>
+                        <li><img src="images/khalidpic.jpg">Khalid</li>
                     </ul>
                 </div>
             </div>
-            <!-- <div class="story-container">
-                <div class="story-text">
-                    <p>Stories</p>
-                </div>
-                <div class="story-content">
-                    <img src="/Scrapix/scrapix/images/bepic.jpg">
-                    <img src="/Scrapix/scrapix/images/bepic.jpg">
-                    <img src="/Scrapix/scrapix/images/kjpic.jpg">
-                    <img src="/Scrapix/scrapix/images/kjpic.jpg">
-                    <img src="/Scrapix/scrapix/images/khalidpic.jpg">
-                    <img src="/Scrapix/scrapix/images/khalidpic.jpg">
-                </div>
-            </div>
-            <div class="suggestion-container">
-                <div class="suggest-text">
-                    <p>Suggestions For You</p>
-                </div>
-                <div class="suggest-content">
-                    <ul>
-                        <li><img src="/Scrapix/scrapix/images/bepic.jpg">Billie Eilish</li>
-                        <li><img src="/Scrapix/scrapix/images/kjpic.jpg">Kendell Jenner</li>
-                        <li><img src="/Scrapix/scrapix/images/khalidpic.jpg">Khalid</li>
-                    </ul>
-                </div>
-            </div> -->
         </div>
     </div>
 </body>

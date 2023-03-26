@@ -33,6 +33,7 @@ function getCity(coordinates) {
     var lat = coordinates[0];
     var lng = coordinates[1];
 
+    // xhr.setRequestHeader('Accept-Language', 'n-US;q=0.8,en;q=0.5');
     // Paste your LocationIQ token below.
     xhr.open('GET', "https://us1.locationiq.com/v1/reverse.php?key=pk.a2c05bfe0d9719fa7a9950a69e692b59&lat=" + lat + "&lon=" + lng + "&format=json", true);
     xhr.send();

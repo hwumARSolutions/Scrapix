@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Scrapix | Login</title>
-    <link rel="stylesheet" href="css/login-style.css" />
+    <link rel="stylesheet" href="login-style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 
@@ -22,14 +22,14 @@
                 <p class="or-word">or</p>
                 <p class="dash">————</p>
             </div>
-            <form action="php/login-successfully.php" class="log-in-form" method="post">
+            <form action="login-successfully.php" class="log-in-form" method="post">
                 <div class="username">
                     <input type="text" class="form-input" name="username" id="username" placeholder="Scrapix Username" required/>
                 </div>
                 <div class="password">
                     <input type="password" class="form-input" name="password" id="password" placeholder="Password" required/>
                     <i class="far fa-eye" id="togglePassword"></i>
-                    <script src="javascript/login-password-visible.js"></script>
+                    <script src="login-password-visible.js"></script>
                 </div>
                 <div class="log-in">
                     <input type="submit" name="submit" id="submit" class="form-submit" value="Log In" />

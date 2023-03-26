@@ -7,9 +7,9 @@
     <title>@<?php session_start(); echo $_SESSION['username'];?> | Scrapbook Explore</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/user-nav-style.css">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/user-scrap-explore-style.css">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/rs-scrap-explore-style.css">
+    <link rel="stylesheet" href="user-nav-style.css">
+    <link rel="stylesheet" href="user-scrap-explore-style.css">
+    <link rel="stylesheet" href="rs-scrap-explore-style.css">
     <script src="https://kit.fontawesome.com/4c430707bb.js" crossorigin="anonymous"></script>
 </head>
 
@@ -20,12 +20,12 @@
                 <p>Scrapix</p>
             </div>
             <div class="ver-nav-content">
-            <a id="a-top" href="/Scrapix/scrapix/php/user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
-                <a href="/Scrapix/scrapix/php/get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
-                <a href="/Scrapix/scrapix/user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
-                <a href="/Scrapix/scrapix/php/user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
-                <a href="/Scrapix/scrapix/php/user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
-                <a d="a-bottom" href="/Scrapix/scrapix/index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
+                <a id="a-top" href="user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
+                <a href="get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
+                <a href="user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
+                <a href="user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
+                <a href="user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
+                <a d="a-bottom" href="index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
             </div>
         </div>
         <div class="side-nav">
@@ -51,7 +51,7 @@
                                         </div>
                                         <div class="post-header">
                                             <div class="post-profile-pic">
-                                                <img src="/Scrapix/scrapix/images/user-profile.png">
+                                                <img src="images/user-profile.png">
                                             </div>
                                             <div class="username-time-loc">
                                                 <p class="post-username"><?php echo ($post_card['username']); ?></p>

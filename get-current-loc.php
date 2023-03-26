@@ -94,7 +94,7 @@
                     <input type="text" style="display:none;" name="longitude" id="longitude">
                     <h2>Your Current Location</h2>
                     <input type="text" name="city-name" id="city-name" readonly>
-                    <script src="/Scrapix/scrapix/javascript/gps-location.js"></script>
+                    <script src="gps-location.js"></script>
                     <input type="submit" name="submit-loc" id="submit-loc" value="OK">
                 </form>
             </div>

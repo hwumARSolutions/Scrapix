@@ -7,9 +7,9 @@
         <?php session_start(); echo $_SESSION['username'];?> | AR Filters</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/user-nav-style.css">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/user-arfilters-style.css">
-    <link rel="stylesheet" href="/Scrapix/scrapix/css/rs-user-arfilters-style.css">
+    <link rel="stylesheet" href="user-nav-style.css">
+    <link rel="stylesheet" href="user-arfilters-style.css">
+    <link rel="stylesheet" href="rs-user-arfilters-style.css">
     <script src="https://kit.fontawesome.com/4c430707bb.js" crossorigin="anonymous"></script>
 </head>
 
@@ -20,12 +20,12 @@
                 <p>Scrapix</p>
             </div>
             <div class="ver-nav-content">
-            <a id="a-top" href="/Scrapix/scrapix/php/user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
-                <a href="/Scrapix/scrapix/php/get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
-                <a href="/Scrapix/scrapix/user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
-                <a href="/Scrapix/scrapix/php/user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
-                <a href="/Scrapix/scrapix/php/user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
-                <a d="a-bottom" href="/Scrapix/scrapix/index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
+                <a id="a-top" href="user-homepage.php"><i class="fa-sharp fa-solid fa-house"></i><p>Home</p></a>
+                <a href="get-current-loc.php"><i class="fa-sharp fa-solid fa-compass"></i><p>Explore</p></a>
+                <a href="user-arfilters.php"><i class="fa-solid fa-wand-magic-sparkles"></i><p>AR Filters</p></a>
+                <a href="user-scrapbook.php"><i class="fa-solid fa-book"></i><p>Scrapbook</p></a>
+                <a href="user-profile.php"><i class="fa-solid fa-user"></i><p>Profile</p></a>
+                <a d="a-bottom" href="index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a>
             </div>
         </div>
         <div class="side-nav" id="side-nav">
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <script type="text/javascript" src="lib/js/deepar.js"></script>
-            <script type="text/javascript" src="javascript/filters.js"></script>
+            <script type="text/javascript" src="filters.js"></script>
         </div>
     </div>
 </body>

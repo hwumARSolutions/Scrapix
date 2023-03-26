@@ -26,6 +26,10 @@ function myText(type, text, x, y, font, color) {
     this.color = color;
 }
 
+document.getElementById('hex').addEventListener('change', function(e) {
+    render();
+});
+
 document.getElementById('image-input').addEventListener('change', function(e) {
     const files = e.target.files;
     for (let i = 0; i < files.length; i++) {

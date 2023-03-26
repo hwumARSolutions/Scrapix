@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Scrapix | Sign Up</title>
-    <link rel="stylesheet" href="css/signup-style.css" />
+    <link rel="stylesheet" href="signup-style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 
@@ -22,7 +22,7 @@
                 <p class="or-word">or</p>
                 <p class="dash">————</p>
             </div>
-            <form action="php/signup-successfully.php" class="sign-up-form" method="post">
+            <form action="signup-successfully.php" class="sign-up-form" method="post">
                 <div class="email-address">
                     <input type="text" class="form-input" name="email-address" id="email-address" placeholder="Email Address" required/>
                 </div>
@@ -45,7 +45,7 @@
                         <p id="length" class="invalid">Minimum 8 characters</p>
                     </div>
                 </div>
-                <script src="javascript/password-rule.js"></script>
+                <script src="password-rule.js"></script>
                 <div class="re-password">
                     <input type="password" class="form-input" name="re-password" id="re-password" placeholder="Repeat Your Password" onkeyup="check();" required/>
                     <i class="far fa-eye" id="togglerePassword"></i>
@@ -56,8 +56,8 @@
                 font-weight: bold;
               "></p>
                 </div>
-                <script src="javascript/signup-password-visible.js"></script>
-                <script src="javascript/confirm-password.js"></script>
+                <script src="signup-password-visible.js"></script>
+                <script src="confirm-password.js"></script>
                 <div class="terms">
                     <div class="terms-line">
                         <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required/>

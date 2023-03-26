@@ -16,6 +16,13 @@
 }
 
 @media only screen and (max-width: 1000px) {
+    .explore-news-feed {
+        Column-Count: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
     .container {
         flex-direction: column;
         align-items: center;
@@ -77,11 +84,17 @@
     .page-content {
         height: 80%;
     }
+    .page-title {
+        justify-content: center;
+    }
+    .post-card .post-image img {
+        max-height: 400px;
+    }
 }
 
 @media only screen and (max-width: 790px) {
     div.side-nav {
-        height: 600px;
+        height: 100%;
     }
     .container {
         width: 100%;
@@ -110,11 +123,8 @@
     div.side-nav {
         margin-top: 3%;
     }
-    .profile-box {
-        display: none;
-    }
-    .post-box {
-        width: 90%;
+    .scrap-title span {
+        font-size: 14px;
     }
 }
 
@@ -129,26 +139,30 @@
     .page-title {
         justify-content: center;
     }
-    .post-caption p {
-        font-size: 14px;
+    .image {
+        width: 85%;
+        height: 95%;
     }
-    .post-box::-webkit-scrollbar {
-        display: none;
-    }
-    .post-card {
-        margin: 10px;
-    }
-    .comment-box .comment-content {
-        font-size: 10px;
+    .scrap-content {
+        height: 80%;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .ver-nav-content a {
-        font-size: 10px;
+        font-size: 9px;
     }
     div.side-nav {
         height: 600px;
+    }
+    .page-title-button {
+        font-size: 12px;
+    }
+    .page-content {
+        height: 60%;
+    }
+    .scrap-content {
+        height: 80%;
     }
 }
 
@@ -160,7 +174,17 @@
     div.side-nav {
         height: 600px;
     }
-    .post-caption p {
-        font-size: 12px;
+    .image {
+        width: 85%;
+        height: 95%;
+    }
+    .scrap-content {
+        height: 80%;
+    }
+    .page-content {
+        height: 40%;
+    }
+    .scrap-title span {
+        font-size: 10px;
     }
 }

@@ -167,7 +167,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin: 20px;
     border: transparent;
     border-radius: 5px;
@@ -378,13 +378,17 @@
 
 .news-feed .post-box .post-buttons .like-button,
 .news-feed .post-box .post-buttons .repost-button {
-    width: fit-content;
+    padding: 4px 8px;
     height: 30px;
     text-align: center;
     background-color: transparent;
     border: transparent;
     border-radius: 5px;
     font-size: 14px;
+}
+
+.news-feed .post-box .post-buttons .like-button i {
+    margin-left: 6px;
 }
 
 .news-feed .post-box .post-buttons .repost-button {
