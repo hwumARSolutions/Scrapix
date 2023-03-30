@@ -14,20 +14,25 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping database structure for scrapix
+CREATE DATABASE IF NOT EXISTS `scrapix` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
+USE `scrapix`;
+
 -- Dumping structure for table scrapix.post
 CREATE TABLE IF NOT EXISTS `post` (
   `post_id` int(11) NOT NULL AUTO_INCREMENT,
-  `author_username` text NOT NULL,
+  `author_username` varchar(50) NOT NULL DEFAULT '',
   `post_content` text DEFAULT NULL,
   `image` longblob DEFAULT NULL,
   `capture_image` longblob DEFAULT NULL,
   `created_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `likes` int(11) NOT NULL DEFAULT 0,
-  `latitude` text DEFAULT NULL,
-  `longitude` text DEFAULT NULL,
-  `city` text CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `latitude` varchar(50) DEFAULT NULL,
+  `longitude` varchar(50) DEFAULT NULL,
+  `city` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Data exporting was unselected.
 
@@ -35,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `post` (
 CREATE TABLE IF NOT EXISTS `post_comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
-  `comment_username` text NOT NULL,
+  `comment_username` varchar(50) NOT NULL DEFAULT '',
   `comment_content` text NOT NULL,
   `comment_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`comment_id`),
@@ -49,21 +54,21 @@ CREATE TABLE IF NOT EXISTS `post_comment` (
 CREATE TABLE IF NOT EXISTS `post_likes` (
   `likes_id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
-  `likes_username` text NOT NULL,
+  `likes_username` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`likes_id`),
   KEY `FK_post_likes_post` (`post_id`),
   CONSTRAINT `FK_post_likes_post` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=189 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=192 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Data exporting was unselected.
 
 -- Dumping structure for table scrapix.scrapbook
 CREATE TABLE IF NOT EXISTS `scrapbook` (
   `scrapbook_id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` text NOT NULL,
+  `username` varchar(50) NOT NULL DEFAULT '',
   `image_content` longblob NOT NULL,
   `created_on` timestamp NULL DEFAULT current_timestamp(),
-  `title` text DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`scrapbook_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -72,13 +77,13 @@ CREATE TABLE IF NOT EXISTS `scrapbook` (
 -- Dumping structure for table scrapix.user
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` tinytext NOT NULL,
-  `email` tinytext NOT NULL,
-  `password` text NOT NULL,
+  `username` varchar(50) NOT NULL DEFAULT '',
+  `email` text NOT NULL,
+  `password` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`user_id`) USING BTREE,
   UNIQUE KEY `user_id` (`user_id`) USING BTREE,
-  KEY `username` (`username`(255)) USING HASH
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  KEY `username` (`username`) USING HASH
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Data exporting was unselected.
 
